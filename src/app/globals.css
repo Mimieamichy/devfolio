@@ -8,30 +8,30 @@ body {
 
 @layer base {
   :root {
-    /* Light Theme - DevFolio */
-    --background: 210 16% 96%; /* Light Gray (#EDF2F7) */
-    --foreground: 224 24% 15%; /* Dark Blue (#1A202C) - Adjusted for better contrast on light bg */
+    /* Light Theme - Modern/Techy Vibe */
+    --background: 0 0% 96%; /* Very Light Gray (#F5F5F5) */
+    --foreground: 224 24% 15%; /* Dark Blue (#1A202C) - Adjusted for better contrast */
     --card: 0 0% 100%;
     --card-foreground: 224 24% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 24% 15%;
     --primary: 224 24% 15%; /* Dark Blue (#1A202C) */
     --primary-foreground: 0 0% 98%;
-    --secondary: 210 16% 93%; /* Slightly darker gray for secondary elements */
+    --secondary: 210 16% 93%; /* Existing light gray */
     --secondary-foreground: 224 24% 15%;
     --muted: 210 16% 93%;
     --muted-foreground: 224 24% 45%;
-    --accent: 175 53% 50%; /* Teal (#4DC0B5) */
-    --accent-foreground: 224 24% 15%;
+    --accent: 211 100% 50%; /* Electric Blue (#007BFF) */
+    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 10% 88%; /* Lighter border */
+    --border: 210 10% 88%;
     --input: 210 10% 88%;
-    --ring: 175 53% 50%; /* Teal for focus rings */
-    --chart-1: 175 53% 50%;
+    --ring: 211 100% 50%; /* Electric Blue for focus rings */
+    --chart-1: 211 100% 50%; /* Chart colors adjusted */
     --chart-2: 224 24% 30%;
     --chart-3: 210 16% 70%;
-    --chart-4: 175 40% 60%;
+    --chart-4: 211 80% 60%;
     --chart-5: 224 20% 50%;
     --radius: 0.5rem;
 
@@ -43,11 +43,11 @@ body {
      --sidebar-accent: 240 4.8% 95.9%;
      --sidebar-accent-foreground: 240 5.9% 10%;
      --sidebar-border: 220 13% 91%;
-     --sidebar-ring: 217.2 91.2% 59.8%;
+     --sidebar-ring: 211 100% 50%; /* Ring adjusted */
   }
 
   .dark {
-     /* Dark Theme - DevFolio */
+     /* Dark Theme - Modern/Techy Vibe */
     --background: 224 24% 15%; /* Dark Blue (#1A202C) */
     --foreground: 210 16% 96%; /* Light Gray (#EDF2F7) */
     --card: 224 24% 20%; /* Slightly lighter dark blue */
@@ -56,33 +56,33 @@ body {
     --popover-foreground: 210 16% 96%;
     --primary: 210 16% 96%; /* Light Gray for primary elements in dark mode */
     --primary-foreground: 224 24% 15%;
-    --secondary: 224 24% 25%; /* Darker secondary */
-    --secondary-foreground: 210 16% 96%;
+    --secondary: 243 70% 60%; /* Desaturated Purple (#4F46E5) */
+    --secondary-foreground: 210 16% 96%; /* Light Gray text on purple */
     --muted: 224 24% 25%;
     --muted-foreground: 210 16% 65%;
-    --accent: 175 53% 50%; /* Teal (#4DC0B5) */
-    --accent-foreground: 224 24% 15%; /* Dark text on Teal */
+    --accent: 211 100% 50%; /* Electric Blue (#007BFF) */
+    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 224 24% 30%; /* Darker border */
     --input: 224 24% 30%;
-    --ring: 175 53% 50%; /* Teal for focus rings */
-     --chart-1: 175 53% 50%;
+    --ring: 211 100% 50%; /* Electric Blue for focus rings */
+     --chart-1: 211 100% 50%; /* Chart colors adjusted */
      --chart-2: 210 16% 80%;
-     --chart-3: 224 24% 50%;
-     --chart-4: 175 40% 70%;
+     --chart-3: 243 70% 70%; /* Lighter purple */
+     --chart-4: 211 80% 70%; /* Lighter blue */
      --chart-5: 210 10% 60%;
      --radius: 0.5rem;
 
      /* Sidebar dark colors (adjust if sidebar used) */
      --sidebar-background: 240 5.9% 10%;
      --sidebar-foreground: 240 4.8% 95.9%;
-     --sidebar-primary: 224.3 76.3% 48%;
-     --sidebar-primary-foreground: 0 0% 100%;
+     --sidebar-primary: 211 100% 50%; /* Electric Blue primary */
+     --sidebar-primary-foreground: 0 0% 98%;
      --sidebar-accent: 240 3.7% 15.9%;
      --sidebar-accent-foreground: 240 4.8% 95.9%;
      --sidebar-border: 240 3.7% 15.9%;
-     --sidebar-ring: 217.2 91.2% 59.8%;
+     --sidebar-ring: 211 100% 50%; /* Ring adjusted */
   }
 }
 
