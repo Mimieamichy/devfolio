@@ -9,7 +9,7 @@ const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Blog', href: '/blog' },
+  // Removed Blog link
   { label: 'Contact', href: '#contact' },
 ];
 
