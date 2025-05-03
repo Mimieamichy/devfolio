@@ -5,30 +5,17 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { getRecentPosts } from '@/lib/blog'; // We'll create this later
+// No longer import getRecentPosts here
 import type { PostMeta } from '@/lib/blog';
-import { useEffect, useState } from 'react';
-import { Skeleton } from '../ui/skeleton';
+// Removed useEffect, useState
+import { Skeleton } from '../ui/skeleton'; // Keep Skeleton for potential future use or remove if not needed
 
-const BlogPreviewSection = () => {
-  const [posts, setPosts] = useState<PostMeta[]>([]);
-  const [loading, setLoading] = useState(true);
+interface BlogPreviewSectionProps {
+  posts: PostMeta[]; // Accept posts as a prop
+}
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        // Simulate fetching data if getRecentPosts is async
-        const recentPosts = await getRecentPosts(3); // Get latest 3 posts
-        setPosts(recentPosts);
-      } catch (error) {
-        console.error("Failed to fetch recent posts:", error);
-        // Handle error state if necessary
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPosts();
-  }, []);
+const BlogPreviewSection = ({ posts }: BlogPreviewSectionProps) => {
+  // Removed useState for posts and loading
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -57,6 +44,9 @@ const BlogPreviewSection = () => {
      }
   };
 
+  // Determine loading state based on prop availability (though ideally data is always present)
+  const loading = !posts; // Simple check, adjust if needed
+
   return (
     <section id="blog-preview" className="container mx-auto px-4 md:px-6 py-12 md:py-16 lg:py-20 bg-secondary/50 rounded-lg">
       <h2 className="text-3xl font-bold text-center mb-10 md:mb-12 text-primary">Recent Blog Posts</h2>
@@ -67,25 +57,8 @@ const BlogPreviewSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
         >
-        {loading ? (
-           Array.from({ length: 3 }).map((_, index) => (
-              <motion.div key={`skel-${index}`} variants={cardVariants}>
-                 <Card className="overflow-hidden h-full flex flex-col shadow-md">
-                    <CardHeader>
-                        <Skeleton className="h-6 w-3/4 mb-2" />
-                        <Skeleton className="h-4 w-1/2" />
-                    </CardHeader>
-                    <CardContent className="flex-grow">
-                        <Skeleton className="h-4 w-full mb-2" />
-                         <Skeleton className="h-4 w-5/6" />
-                    </CardContent>
-                    <CardFooter className="p-4 md:p-6 border-t">
-                       <Skeleton className="h-8 w-24" />
-                    </CardFooter>
-                 </Card>
-              </motion.div>
-           ))
-        ) : posts.length > 0 ? (
+        {/* Conditional rendering based on posts prop */}
+        {posts && posts.length > 0 ? (
           posts.map((post) => (
             <motion.div key={post.slug} variants={cardVariants} whileHover="hover">
               <Card className="overflow-hidden h-full flex flex-col shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -111,10 +84,33 @@ const BlogPreviewSection = () => {
             </motion.div>
           ))
         ) : (
-          <p className="text-center col-span-full text-muted-foreground">No blog posts found yet.</p>
+           // Show message if no posts, or skeletons if loading state was kept
+           <p className="text-center col-span-full text-muted-foreground">No blog posts found yet.</p>
+        // Example of keeping skeleton logic if needed:
+        // loading ? (
+        //    Array.from({ length: 3 }).map((_, index) => (
+        //       <motion.div key={`skel-${index}`} variants={cardVariants}>
+        //          <Card className="overflow-hidden h-full flex flex-col shadow-md">
+        //             <CardHeader>
+        //                 <Skeleton className="h-6 w-3/4 mb-2" />
+        //                 <Skeleton className="h-4 w-1/2" />
+        //             </CardHeader>
+        //             <CardContent className="flex-grow">
+        //                 <Skeleton className="h-4 w-full mb-2" />
+        //                  <Skeleton className="h-4 w-5/6" />
+        //             </CardContent>
+        //             <CardFooter className="p-4 md:p-6 border-t">
+        //                <Skeleton className="h-8 w-24" />
+        //             </CardFooter>
+        //          </Card>
+        //       </motion.div>
+        //    ))
+        // ) : (
+        //    <p className="text-center col-span-full text-muted-foreground">No blog posts found yet.</p>
+        // )
         )}
       </motion.div>
-       {!loading && posts.length > 0 && (
+       {posts && posts.length > 0 && (
         <div className="text-center mt-12">
             <Button asChild variant="outline">
                 <Link href="/blog">
