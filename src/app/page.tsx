@@ -9,12 +9,12 @@ import { Separator } from '@/components/ui/separator';
 
 export default async function Home() {
   // Replace with your actual GitHub username
-  const githubUsername = "octocat";
+  const githubUsername = "Mimieamichy";
 
   // Removed fetching recent posts
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <HeroSection />
       <Separator className="my-12 md:my-16 lg:my-20" />
       <AboutSection />

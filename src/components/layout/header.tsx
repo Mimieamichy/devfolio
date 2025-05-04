@@ -21,7 +21,7 @@ const Header = () => {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             {/* Optional: Add a logo SVG or text */}
             {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6"><path d="m12 3 4 4-4 4-4-4Z"/><path d="M12 3v18"/><path d="m16 7 4 4-4 4"/><path d="m8 7-4 4 4 4"/></svg> */}
-            <span className="hidden font-bold sm:inline-block text-primary">
+            <span className="hidden font-bold sm:inline-block ml-10 text-primary">
               DevFolio
             </span>
           </Link>
@@ -72,7 +72,7 @@ const Header = () => {
             <span className="font-bold text-primary">DevFolio</span>
           </Link>
         </div>
-        <div className="flex flex-1 items-center justify-end space-x-2">
+        <div className="flex flex-1 items-center justify-end mr-10 space-x-2">
           <ModeToggle />
         </div>
       </div>

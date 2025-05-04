@@ -1,6 +1,8 @@
-// src/app/api/contact/route.ts
 import { type NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -22,22 +24,25 @@ export async function POST(request: NextRequest) {
 
     const { name, email, message } = validation.data;
 
-    // **Dummy Handler:** In a real application, you would:
-    // 1. Send an email (using a service like SendGrid, Resend, Nodemailer)
-    // 2. Save the message to a database
-    // 3. Notify yourself via Slack, etc.
-    console.log('--- Contact Form Submission ---');
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
-    console.log('-----------------------------');
+    const response = await resend.emails.send({
+      from: 'Contact Form <onboarding@resend.dev>', // You can change this after verifying a domain/sender
+      to: process.env.EMAIL_RECEIVER!,
+      subject: `New Contact Message from ${name}`,
+      replyTo: email,
+      text: `
+        Name: ${name}
+        Email: ${email}
+        Message:
+        ${message}
+      `,
+    });
 
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 500));
+    if (response.error) {
+      console.error(response.error);
+      return NextResponse.json({ message: 'Failed to send email' }, { status: 500 });
+    }
 
-    // Return a success response
-    return NextResponse.json({ message: 'Message received successfully!' }, { status: 200 });
-
+    return NextResponse.json({ message: 'Message sent successfully!' }, { status: 200 });
   } catch (error) {
     console.error('Contact API error:', error);
     return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });

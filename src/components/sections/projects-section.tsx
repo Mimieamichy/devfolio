@@ -13,12 +13,12 @@ const projects = [
   {
     id: 1,
     title: 'Project Alpha',
-    description: 'A modern e-commerce platform built with Next.js, TypeScript, and Stripe integration.',
-    imageUrl: 'https://picsum.photos/400/250?random=1',
+    description: 'A modern review platform built with React.js, TypeScript, and Paystack integration.',
+    imageUrl: '/jafis.png',
     imageHint: 'e-commerce website',
-    tags: ['Next.js', 'TypeScript', 'TailwindCSS', 'Stripe'],
-    liveUrl: '#',
-    repoUrl: '#',
+    tags: ['React.js', 'TypeScript', 'TailwindCSS', 'Paystack'],
+    liveUrl: 'https://jafiai.vercel.app/',
+    repoUrl: 'https://github.com/Mimieamichy/jafi',
   },
   {
     id: 2,

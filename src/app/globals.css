@@ -21,8 +21,8 @@ body {
     --secondary-foreground: 224 24% 15%;
     --muted: 210 16% 93%;
     --muted-foreground: 224 24% 45%;
-    --accent: 211 100% 50%; /* Electric Blue (#007BFF) */
-    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
+    --accent:  --accent: 40 60% 45%; /* yellowish brown */
+    --accent-foreground: 40 100% 10%; /* dark text for contrast */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 210 10% 88%;
@@ -56,12 +56,12 @@ body {
     --popover-foreground: 210 16% 96%;
     --primary: 210 16% 96%; /* Light Gray for primary elements in dark mode */
     --primary-foreground: 224 24% 15%;
-    --secondary: 243 70% 60%; /* Desaturated Purple (#4F46E5) */
+    --secondary: 220, 60%, 20%; /* Desaturated Purple (#4F46E5) */
     --secondary-foreground: 210 16% 96%; /* Light Gray text on purple */
     --muted: 224 24% 25%;
     --muted-foreground: 210 16% 65%;
-    --accent: 211 100% 50%; /* Electric Blue (#007BFF) */
-    --accent-foreground: 0 0% 98%; /* White/Light text on accent */
+    --accent: 40 70% 50%;
+    --accent-foreground: 40 100% 10%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 224 24% 30%; /* Darker border */
