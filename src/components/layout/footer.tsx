@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="text-center text-sm leading-loose md:text-left ml-10">
           © {currentYear} Mae Techs. All rights reserved. {/* Update with your name */}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center ml-10 gap-2">
           {socialLinks.map((link) => (
             <Button key={link.label} variant="ghost" size="icon" asChild>
               <Link href={link.href} target="_blank" rel="noopener noreferrer">
