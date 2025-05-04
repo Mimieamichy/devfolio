@@ -28,7 +28,7 @@ const Footer = () => {
     <footer className="bg-secondary text-secondary-foreground">
       <div className="container flex flex-col items-center justify-between gap-4 py-6 md:h-20 md:flex-row md:py-0">
         <div className="text-center text-sm leading-loose md:text-left ml-10">
-          © {currentYear} Mae Techs. All rights are reserved.{" "}
+          © {currentYear} Mae Techs. All rights reserved.{" "}
           {/* Update with your name */}
         </div>
         <div className="flex items-center ml-10 gap-2">
