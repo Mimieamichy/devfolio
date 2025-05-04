@@ -24,15 +24,15 @@ export const metadata: Metadata = {
     title: 'DevFolio - Frontend Developer Portfolio',
     description: 'Showcasing frontend development projects and skills.',
     type: 'website',
-    // url: 'https://yourdomain.com', // Add your deployed URL
-    // images: [ // Add a preview image
-    //   {
-    //     url: 'https://yourdomain.com/og-image.png',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: 'DevFolio Portfolio Preview',
-    //   },
-    // ],
+     url: 'https://devfolio-livid-two.vercel.app/', // Add your deployed URL
+     images: [ // Add a preview image
+       {
+        url: 'https://devfolio-livid-two.vercel.app/og-image.png',
+         width: 1200,
+         height: 630,
+         alt: 'DevFolio Portfolio Preview',
+       },
+     ],
   },
 };
 
