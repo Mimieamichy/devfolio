@@ -2,6 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { Resend } from 'resend';
 
+// Initialize Resend with the environment variable
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
@@ -24,9 +25,15 @@ export async function POST(request: NextRequest) {
 
     const { name, email, message } = validation.data;
 
+    // Ensure email receiver is available in environment variables
+    if (!process.env.EMAIL_RECEIVER) {
+      return NextResponse.json({ message: 'Email receiver is not configured' }, { status: 500 });
+    }
+
+    // Send email via Resend
     const response = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // You can change this after verifying a domain/sender
-      to: process.env.EMAIL_RECEIVER!,
+      from: 'Contact Form <onboarding@resend.dev>', // Use a verified sender email
+      to: process.env.EMAIL_RECEIVER!,  // Your email address to receive the contact form message
       subject: `New Contact Message from ${name}`,
       replyTo: email,
       text: `
@@ -37,8 +44,9 @@ export async function POST(request: NextRequest) {
       `,
     });
 
+    // Check if the email was sent successfully
     if (response.error) {
-      console.error(response.error);
+      console.error('Failed to send email:', response);
       return NextResponse.json({ message: 'Failed to send email' }, { status: 500 });
     }
 

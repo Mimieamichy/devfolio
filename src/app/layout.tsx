@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: 'DevFolio - Frontend Developer Portfolio',
   description: 'A modern, professional developer portfolio built with Next.js, TypeScript, and TailwindCSS.',
   keywords: ['frontend developer', 'react developer', 'next.js', 'typescript', 'portfolio', 'web developer'],
-  authors: [{ name: 'Your Name Here' }], // Update with your name
+  authors: [{ name: 'Amichy' }], // Update with your name
   // Add more SEO tags as needed (Open Graph, Twitter Cards)
   openGraph: {
     title: 'DevFolio - Frontend Developer Portfolio',
