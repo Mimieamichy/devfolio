@@ -23,10 +23,10 @@ const projects = [
   {
     id: 2,
     title: 'Project Beta',
-    description: 'A simple blog built with Next.js and Markdown.',
+    description: 'A simple personal blog built with Nextjs, Markdown, and TailwindCSS, focusing on performance.',
     imageUrl: '/markdownblog.png',
     imageHint: 'Markdown blog website',
-    tags: ['Nextjs', 'TypeScript', 'tailwindCss', 'Markdown'],
+    tags: ['Nextjs', 'TypeScript', 'tailwindCss', 'Markdown', 'SEO'],
     liveUrl: 'https://markdownblog-swart.vercel.app/',
     repoUrl: 'https://github.com/Mimieamichy/markdownblog',
   },
