@@ -36,7 +36,7 @@ const projects = [
     description: 'Your simple and stylish Todo App, built with Nextjs, TailwindCSS, Zod and React focusing on performance.',
     imageUrl: '/taskify.png',
     imageHint: 'Todo App',
-    tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'Zod'],
+    tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'Zod', 'Firebase'],
     liveUrl: 'https://taskify-alpha-rust.vercel.app/',
     repoUrl: 'https://github.com/Mimieamichy/taskify',
   },
