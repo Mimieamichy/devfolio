@@ -33,12 +33,12 @@ const projects = [
   {
     id: 3,
     title: 'Project Gamma',
-    description: 'A personal blog built with Astro, Markdown, and TailwindCSS, focusing on performance.',
-    imageUrl: 'https://picsum.photos/400/250?random=3',
-    imageHint: 'blog website design',
-    tags: ['Astro', 'Markdown', 'TailwindCSS', 'SEO'],
-    liveUrl: '#',
-    repoUrl: '#',
+    description: 'Your simple and stylish Todo App, built with Nextjs, TailwindCSS, Zod and React focusing on performance.',
+    imageUrl: '/taskify.png',
+    imageHint: 'Todo App',
+    tags: ['Nextjs', 'TypeScript', 'TailwindCSS', 'Zod'],
+    liveUrl: 'https://taskify-alpha-rust.vercel.app/',
+    repoUrl: 'https://github.com/Mimieamichy/taskify',
   },
 ];
 
