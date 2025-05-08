@@ -47,7 +47,7 @@ const HeroSection = () => {
       variants={containerVariants}
     >
       {/* Text Section */}
-      <div className="flex flex-col justify-center space-y-6">
+      <div className="flex flex-col justify-center md:ml-20 space-y-6">
         <motion.div className="space-y-2" variants={itemVariants}>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">
             {name}

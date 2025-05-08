@@ -7,10 +7,10 @@ import { cn } from '@/lib/utils';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'About', href: '/#about' },
+  { label: 'Projects', href: '/projects' },
   // Removed Blog link
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 const Header = () => {
